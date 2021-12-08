@@ -20,6 +20,8 @@ class OrderViewModel: ViewModel() {
     private val _flavor = MutableLiveData("")
     val flavor: LiveData<String> = _flavor
 
+    val dateOptions: List<String> = getPickupOptions()
+
     private val _date = MutableLiveData("")
     val date: LiveData<String> = _date
 
@@ -28,7 +30,6 @@ class OrderViewModel: ViewModel() {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
-    val dateOptions = getPickupOptions()
 
     init {
         resetOrder()
