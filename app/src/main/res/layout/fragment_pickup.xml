@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,9 +20,11 @@
     tools:context=".PickupFragment">
 
     <data>
+
         <variable
-            name= "viewModel"
+            name="viewModel"
             type="com.example.cupcake.model.OrderViewModel" />
+
         <variable
             name="pickupFragment"
             type="com.example.cupcake.PickupFragment" />
@@ -110,10 +111,9 @@
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel"
                 android:layout_marginEnd="@dimen/side_margin"
                 android:onClick="@{() -> pickupFragment.cancelOrder()}"
-                app:layout_constraintEnd_toStartof="@+id/next_button"
+                android:text="@string/cancel"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/next_button" />
 
@@ -121,10 +121,10 @@
                 android:id="@+id/next_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/side_margin"
-                android:text="@string/next"
                 android:layout_marginStart="@dimen/side_margin"
+                android:layout_marginTop="@dimen/side_margin"
                 android:onClick="@{() -> pickupFragment.goToNextScreen()}"
+                android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/cancel_button"
